@@ -7,7 +7,8 @@ class NetworkService{
     static Future<String> getData(String api)async{
         Uri uri = Uri.http(baseUrl, api);
         Response response = await get(uri);
-
+        print(response.statusCode);
+        
         return response.body;
     }
 }
